@@ -43,12 +43,12 @@
             
             <div class="row mb-3">
                 <label for="detalle" class="w-20">Detalle</label>
-                <textarea name="detalle" id="detalle" class="w-80"></textarea>
+                <textarea rows="4" ="detalle" id="detalle" class="w-80"></textarea>
             </div>
         </div>
 
         <div class="row w-100 mb-3">
-            <button class="btn btn-primary mx-auto">Agregar Ítem</button>
+            <button id="button-addItem" class="btn btn-info mx-auto"><span>Agregar Ítem</span>&nbsp;<img src="ico/icons8-plus.svg" width="16" height="auto"></button>
         </div>
 
         <table class="w-80 mx-auto mb-3">
@@ -110,13 +110,54 @@
         </table>
 
         <div class="row w-100">
-            <button class="btn btn-primary mx-auto">Crear Orden</button>
+            <button disabled id="button-createOrder" class="btn btn-success mx-auto"><span>Crear Orden</span>&nbsp;<img src="ico/icons8-survey-64.png" width="16" height="auto"></button>
         </div>
 
     </div>
 
+    <div hidden class="modals">
+        <div hidden class="modal" id="modal-itemAddSuccess">
+            <div class="modal-bar bg-primary">
+                <span class="modal-title">Operación Exitosa</span>
+            </div>
+            <div class="modal-body">
+                <h3>Ítem Agregado</h3>
+                <p>Se agregó el ítem <strong id="modal-itemAddSuccess-itemName">NombreItem</strong> a la orden.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-itemAddSuccess-button-OK" class="btn btn-primary"><span>OK</span>&nbsp;<img src="ico/icons8-ok.svg" width="16" height="auto"></button>
+            </div>
+        </div>
+        <div hidden class="modal" id="modal-orderSuccess">
+            <div class="modal-bar bg-primary">
+                <span class="modal-title">Operación Exitosa</span>
+            </div>
+            <div class="modal-body">
+                <h3>Orden Creada</h3>
+                <p>La orden para la mesa <strong id="modal-orderSuccess-tableID">MesaID</strong> ha sido creada.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-orderSuccess-button-newOrder" class="btn btn-success"><span>Nueva Orden</span>&nbsp;<img src="ico/icons8-plus.svg" width="16" height="auto"></button>&nbsp;&nbsp;
+                <button id="modal-orderSuccess-button-seePending" class="btn btn-primary"><span>Ver Pendientes</span>&nbsp;<img src="ico/icons8-noticeboard-64.png" width="16" height="auto"></button>
+            </div>
+        </div>
+        <div hidden class="modal" id="modal-orderFailure">
+            <div class="modal-bar bg-danger">
+                <span class="modal-title">Operación Fallida</span>
+            </div>
+            <div class="modal-body">
+                <h3>Error Creando la Orden</h3>
+                <p>La orden para la mesa <strong id="modal-orderFailure-tableID">MesaID</strong> no pudo ser creada. Vuelva a intentarlo más tarde.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-orderFailure-button-OK" class="btn btn-primary"><span>OK</span>&nbsp;<img src="ico/icons8-close.svg" width="16" height="auto"></button>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <p class="footer-p">Copyright © 2023 All Rights and Lefts Reserved</p>
+        <p class="footer-p pt-3">Copyright © 2023 All Rights and Lefts Reserved</p>
+        <p class="footer-p pb-3"><small>Icons obtained from icons8</small></p>
     </footer>
     <script src="js/main.js"></script>
     <script src="js/crearOrden.js"></script>

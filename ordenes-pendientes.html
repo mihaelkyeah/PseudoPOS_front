@@ -36,8 +36,8 @@
         </div>
         
         <div class="row w-100 mb-3">
-            <button class="btn btn-warning mx-auto"><span>Marcar Lista</span>&nbsp;<img src="ico/icons8-waiter-64.png" width="16" height="auto"></button>
-            <button class="btn btn-success mx-auto"><span>Marcar Entregada</span>&nbsp;<img src="ico/icons8-done.svg" width="16" height="auto"></button>
+            <button id="button-markReady" class="btn btn-warning mx-auto"><span>Marcar Lista</span>&nbsp;<img src="ico/icons8-waiter-64.png" width="16" height="auto"></button>
+            <button disabled id="button-markDelivered" class="btn btn-success mx-auto"><span>Marcar Entregada</span>&nbsp;<img src="ico/icons8-done.svg" width="16" height="auto"></button>
         </div>
         
         <table class="w-80 mx-auto mb-3">
@@ -70,8 +70,61 @@
         
     </div>
 
+    <div hidden class="modals">
+        <div hidden class="modal" id="modal-orderReadySuccess">
+            <div class="modal-bar bg-primary">
+                <span class="modal-title">Operación Exitosa</span>
+            </div>
+            <div class="modal-body">
+                <h3>Orden Lista</h3>
+                <p>Se marcó la orden para la mesa <strong id="modal-orderReadySuccess-tableName">MesaID</strong> como lista.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-orderReadySuccess-button-OK" class="btn btn-primary"><span>OK</span>&nbsp;<img src="ico/icons8-ok.svg" width="16" height="auto"></button>
+            </div>
+        </div>
+        <div hidden class="modal" id="modal-orderReadyFailure">
+            <div class="modal-bar bg-danger">
+                <span class="modal-title">Operación Fallida</span>
+            </div>
+            <div class="modal-body">
+                <h3>Error Marcando la Orden como Lista</h3>
+                <p>La orden para la mesa <strong id="modal-orderReadyFailure-tableID">MesaID</strong> no pudo marcarse como lista. Vuelva a intentarlo más tarde.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-orderReadyFailure-button-OK" class="btn btn-primary"><span>OK</span>&nbsp;<img src="ico/icons8-close.svg" width="16" height="auto"></button>
+            </div>
+        </div>
+
+        <div hidden class="modal" id="modal-orderDeliverySuccess">
+            <div class="modal-bar bg-primary">
+                <span class="modal-title">Operación Exitosa</span>
+            </div>
+            <div class="modal-body">
+                <h3>Orden Entregada</h3>
+                <p>La orden para la mesa <strong id="modal-orderDeliverySuccess-tableID">MesaID</strong> ha sido entregada.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-orderDeliverySuccess-button-OK" class="btn btn-primary"><span>OK</span>&nbsp;<img src="ico/icons8-ok.svg" width="16" height="auto"></button>
+            </div>
+        </div>
+        <div hidden class="modal" id="modal-orderDeliveryFailure">
+            <div class="modal-bar bg-danger">
+                <span class="modal-title">Operación Fallida</span>
+            </div>
+            <div class="modal-body">
+                <h3>Error Entregando la Orden</h3>
+                <p>La orden para la mesa <strong id="modal-orderDeliveryFailure-tableID">MesaID</strong> no pudo ser entregada. Vuelva a intentarlo más tarde.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-orderDeliveryFailure-button-OK" class="btn btn-primary"><span>OK</span>&nbsp;<img src="ico/icons8-close.svg" width="16" height="auto"></button>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <p class="footer-p">Copyright © 2023 All Rights and Lefts Reserved</p>
+        <p class="footer-p pt-3">Copyright © 2023 All Rights and Lefts Reserved</p>
+        <p class="footer-p pb-3"><small>Icons obtained from icons8</small></p>
     </footer>
     <script src="js/main.js"></script>
     <script src="js/ordenesPendientes.js"></script>

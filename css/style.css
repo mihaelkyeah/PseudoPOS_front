@@ -8,6 +8,12 @@ body {
     font-family: 'Ubuntu', 'Verdana', 'Tahoma', sans-serif;
 }
 
+.bg-primary { background: var(--primary-hex); color: #fff;}
+.bg-success { background: var(--success); color: #fff;}
+.bg-warning { background: var(--warning); color: #000;}
+.bg-danger { background: var(--danger); color: #fff;}
+.bg-info { background: var(--info); color: #000;}
+
 /* === PRIMARY BACKGROUND COLOR ELEMENTS === */
 div.header-logo-container, nav ul.nav-ul li.active, footer {
     background: var(--primary-hex);
@@ -15,7 +21,6 @@ div.header-logo-container, nav ul.nav-ul li.active, footer {
 /* === 75% WHITE BACKGROUND ELEMENTS === */
 p.header-logo-p, p.footer-p {
     background: #ffffff99;
-    padding: 1.5em;
 }
 
 div.header-logo-container {
@@ -64,12 +69,11 @@ nav ul.nav-ul li:last-child {
 }
 
 div.content-container {
-    margin: 1em 2em 6em 2em;
+    margin: 1em 2em 7em 2em;
 }
 
 div.content-container h1.heading-title {
     text-align: center;
-    margin-bottom: 
 }
 
 footer {
@@ -77,7 +81,6 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 4em;
 }
 footer p.footer-p {
     margin: 0;
@@ -85,9 +88,31 @@ footer p.footer-p {
     font-weight: 500;
     color: #00000077;
 }
+footer p.footer-p small {
+    font-size: x-small;
+}
 
 button, select, option, input, textarea {
     font-family: inherit;
+    font-size: medium;
+    min-height: 2em;
+}
+select, option, input, textarea {
+    border-radius: 0.5em;
+    border: 1px solid #ccc;
+    padding: 0.25em;
+    box-shadow: 0px 0px 1px 2px rgba(var(--primary-r), var(--primary-g), var(--primary-b), 0.125);
+}
+select:focus, option:focus, input:focus, textarea:focus {
+    outline: 2px solid rgba(var(--primary-r), var(--primary-g), var(--primary-b), 0.5);
+}
+option:focus, option:active, option:checked {
+    background: var(--primary-hex);
+    color: #fff;
+    font-weight: 600;
+}
+textarea {
+    resize: none;
 }
 
 button.btn {
@@ -122,6 +147,54 @@ button.btn.btn-info { background-color: var(--info); }
 button.btn.btn-primary, button.btn.btn-success, button.btn.btn-danger { color: #fff; }
 button.btn.btn-warning, button.btn.btn-info { color: #111; }
 
+button.btn:disabled { background-color: #bbb; color: #666; }
+button.btn:disabled img { filter: saturate(0) }
+
 img.table-button {
     cursor: pointer;
+}
+
+.modals {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background: rgb(0,0,0,0.5);
+}
+
+.modals .modal {
+    background: #eee;
+    margin: 20vh auto;
+    /* height: 18em; */
+    padding-bottom: 2em;
+    width: 30em;
+}
+
+.modals .modal .modal-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2em;
+    font-size: large;
+    font-weight: bold;
+}
+.modals .modal .modal-body {
+    padding: 1em;
+    text-align: center;
+}
+.modals .modal .modal-body h3 {
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.modals .modal .modal-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
