@@ -23,7 +23,7 @@ document.querySelector('#button-markDelivered').addEventListener('click', () => 
 });
 
 document.querySelector('#modal-orderDeliverySuccess-button-OK').addEventListener('click', () => {
-    dismissModal('modal-orderDeliverySuccess');
+    window.location.reload();
 });
 document.querySelector('#modal-orderDeliveryFailure-button-OK').addEventListener('click', () => {
     dismissModal('modal-orderDeliveryFailure');

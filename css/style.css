@@ -8,7 +8,7 @@ body {
     font-family: 'Ubuntu', 'Verdana', 'Tahoma', sans-serif;
 }
 
-.bg-primary { background: var(--primary-hex); color: #fff;}
+.bg-primary { background: var(--primary-hex); color: var(--primary-text);}
 .bg-success { background: var(--success); color: #fff;}
 .bg-warning { background: var(--warning); color: #000;}
 .bg-danger { background: var(--danger); color: #fff;}
@@ -22,6 +22,7 @@ div.header-logo-container, nav ul.nav-ul li.active, footer {
 p.header-logo-p, p.footer-p {
     background: #ffffff99;
 }
+p.header-logo-p { text-shadow: 0px 0px 3px white;}
 
 div.header-logo-container {
     margin: 0 auto;
@@ -59,7 +60,7 @@ nav ul.nav-ul li {
 }
 nav ul.nav-ul li.active {
     font-weight: bolder;
-    color: #eee;
+    color: var(--primary-text);
 }
 nav ul.nav-ul li:first-child {
     border-radius: 1em 0em 0em 1em;
@@ -108,7 +109,7 @@ select:focus, option:focus, input:focus, textarea:focus {
 }
 option:focus, option:active, option:checked {
     background: var(--primary-hex);
-    color: #fff;
+    color: var(--primary-text);
     font-weight: 600;
 }
 textarea {
@@ -144,7 +145,8 @@ button.btn.btn-warning { background-color: var(--warning); }
 button.btn.btn-danger { background-color: var(--danger); }
 button.btn.btn-info { background-color: var(--info); }
 
-button.btn.btn-primary, button.btn.btn-success, button.btn.btn-danger { color: #fff; }
+button.btn.btn-primary { color: var(--primary-text); }
+button.btn.btn-success, button.btn.btn-danger { color: #fff; }
 button.btn.btn-warning, button.btn.btn-info { color: #111; }
 
 button.btn:disabled { background-color: #bbb; color: #666; }

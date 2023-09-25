@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PseudoPOS - Crear Orden</title>
     <link rel="shortcut icon" href="ico/icons8-shop-64.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/themes/default.css" type="text/css">
+    <link id="site-theme" rel="stylesheet" href="css/themes/default.css" type="text/css">
     <link rel="stylesheet" href="css/utils.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
     <header>
         <div class="header-logo-container">
-            <p class="header-logo-p">PseudoPOS</p>
+            <p class="header-logo-p row justify-content-center align-items-center"><img src="ico/icons8-shop-64.png" width="64" height="auto">&nbsp;<span>PseudoPOS</span></p>
         </div>
         <nav>
             <ul class="nav-ul">
@@ -22,6 +22,18 @@
                 <li class="nav-ul-li" href="acerca-de.html">Acerca De</li>
             </ul>
         </nav>
+        <div class="row justify-content-center align-items-center py-2">
+            <label for="theme-select">Theme:</label>
+            &nbsp;&nbsp;
+            <select name="theme-select" id="theme-select">
+                <option value="default.css">Default</option>
+                <option value="autumn.css">Autumn</option>
+                <option value="green-light.css">Green (light)</option>
+                <option value="yellow-light.css">Yellow (light)</option>
+                <option value="pinky.css">Pinky</option>
+                <option value="brick.css">Brick</option>
+            </select>
+        </div>
     </header>
 
     <div class="content-container">

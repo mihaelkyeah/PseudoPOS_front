@@ -1,0 +1,12 @@
+:root {
+    --primary-hex: #ff8ef6;
+    --primary-r: 255;
+    --primary-g: 0;
+    --primary-b: 233;
+    --primary-text: #111;
+    
+    --success: green;
+    --warning: orange;
+    --danger: crimson;
+    --info: lightskyblue;
+}
