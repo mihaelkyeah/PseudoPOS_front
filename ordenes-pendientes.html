@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PseudoPOS - Home</title>
+    <link rel="shortcut icon" href="ico/icons8-shop-64.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/themes/default.css" type="text/css">
+    <link rel="stylesheet" href="css/utils.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="header-logo-container">
+            <p class="header-logo-p">PseudoPOS</p>
+        </div>
+        <nav>
+            <ul class="nav-ul">
+                <li class="nav-ul-li" href="index.html">Home</li>
+                <li class="nav-ul-li" href="crear-orden.html">Crear Orden</li>
+                <li class="nav-ul-li active" href="#">Órdenes Pendientes</li>
+                <li class="nav-ul-li" href="acerca-de.html">Acerca De</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-container">
+
+        <h1 class="heading-title">Órdenes Pendientes</h1>
+
+        <div class="row w-80 mx-auto mb-3">
+            <label for="mesa_id" class="w-20">Mesa</label>
+            <select class="form-select w-80" name="mesa_id" id="mesa_id">
+                <option value="1">1</option>
+            </select>
+        </div>
+        
+        <div class="row w-100 mb-3">
+            <button class="btn btn-warning mx-auto"><span>Marcar Lista</span>&nbsp;<img src="ico/icons8-waiter-64.png" width="16" height="auto"></button>
+            <button class="btn btn-success mx-auto"><span>Marcar Entregada</span>&nbsp;<img src="ico/icons8-done.svg" width="16" height="auto"></button>
+        </div>
+        
+        <table class="w-80 mx-auto mb-3">
+            <thead>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Item 1: Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td>Item 2: Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td>Item 3: Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td>Item 4: Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td>Item 5: Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td>Item 6: Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td>Item 7: Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+
+    <footer>
+        <p class="footer-p">Copyright © 2023 All Rights and Lefts Reserved</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/ordenesPendientes.js"></script>
+</body>
+</html>

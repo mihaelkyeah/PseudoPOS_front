@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PseudoPOS - Crear Orden</title>
+    <link rel="shortcut icon" href="ico/icons8-shop-64.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/themes/default.css" type="text/css">
+    <link rel="stylesheet" href="css/utils.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="header-logo-container">
+            <p class="header-logo-p">PseudoPOS</p>
+        </div>
+        <nav>
+            <ul class="nav-ul">
+                <li class="nav-ul-li" href="index.html">Home</li>
+                <li class="nav-ul-li active" href="#">Crear Orden</li>
+                <li class="nav-ul-li" href="ordenes-pendientes.html">Órdenes Pendientes</li>
+                <li class="nav-ul-li" href="acerca-de.html">Acerca De</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-container">
+
+        <h1 class="heading-title">Crear Orden</h1>
+        
+        <div class="col w-80 mx-auto">
+            <div class="row mb-3">
+                <label for="mesa_id" class="w-20">Mesa</label>
+                <select class="form-select w-80" name="mesa_id" id="mesa_id">
+                    <option selected disabled value="">Seleccione una mesa...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            
+            <div class="row mb-3">
+                <label for="detalle" class="w-20">Detalle</label>
+                <textarea name="detalle" id="detalle" class="w-80"></textarea>
+            </div>
+        </div>
+
+        <div class="row w-100 mb-3">
+            <button class="btn btn-primary mx-auto">Agregar Ítem</button>
+        </div>
+
+        <table class="w-80 mx-auto mb-3">
+            <thead>
+                <th class="w-70">Ítem</th>
+                <th class="w-30">Acciones</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Item 1: Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                    <td class="text-center">
+                        <img class="table-button" data-button-type="edit" src="ico/icons8-edit.svg" width="24" height="auto">&nbsp;
+                        <img class="table-button" data-button-type="delete" src="ico/icons8-close.svg" width="24" height="auto">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Item 2: Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                    <td class="text-center">
+                        <img class="table-button" data-button-type="edit" src="ico/icons8-edit.svg" width="24" height="auto">&nbsp;
+                        <img class="table-button" data-button-type="delete" src="ico/icons8-close.svg" width="24" height="auto">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Item 3: Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                    <td class="text-center">
+                        <img class="table-button" data-button-type="edit" src="ico/icons8-edit.svg" width="24" height="auto">&nbsp;
+                        <img class="table-button" data-button-type="delete" src="ico/icons8-close.svg" width="24" height="auto">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Item 4: Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                    <td class="text-center">
+                        <img class="table-button" data-button-type="edit" src="ico/icons8-edit.svg" width="24" height="auto">&nbsp;
+                        <img class="table-button" data-button-type="delete" src="ico/icons8-close.svg" width="24" height="auto">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Item 5: Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                    <td class="text-center">
+                        <img class="table-button" data-button-type="edit" src="ico/icons8-edit.svg" width="24" height="auto">&nbsp;
+                        <img class="table-button" data-button-type="delete" src="ico/icons8-close.svg" width="24" height="auto">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Item 6: Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                    <td class="text-center">
+                        <img class="table-button" data-button-type="edit" src="ico/icons8-edit.svg" width="24" height="auto">&nbsp;
+                        <img class="table-button" data-button-type="delete" src="ico/icons8-close.svg" width="24" height="auto">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Item 7: Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                    <td class="text-center">
+                        <img class="table-button" data-button-type="edit" src="ico/icons8-edit.svg" width="24" height="auto">&nbsp;
+                        <img class="table-button" data-button-type="delete" src="ico/icons8-close.svg" width="24" height="auto">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="row w-100">
+            <button class="btn btn-primary mx-auto">Crear Orden</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <p class="footer-p">Copyright © 2023 All Rights and Lefts Reserved</p>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/crearOrden.js"></script>
+</body>
+</html>
