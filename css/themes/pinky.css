@@ -5,8 +5,8 @@
     --primary-b: 233;
     --primary-text: #111;
     
-    --success: green;
+    --success: limegreen;
     --warning: orange;
     --danger: crimson;
-    --info: lightskyblue;
+    --info: cyan;
 }

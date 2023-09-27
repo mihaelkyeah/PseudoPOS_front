@@ -6,6 +6,19 @@ html, body {
 }
 body {
     font-family: 'Ubuntu', 'Verdana', 'Tahoma', sans-serif;
+    background: var(--theme-background);
+}
+body * {
+    z-index: 1;
+}
+
+.background-underlay {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0 !important;
+    background: rgba(var(--primary-r), var(--primary-g), var(--primary-b), 0.05);
 }
 
 .bg-primary { background: var(--primary-hex); color: var(--primary-text);}
