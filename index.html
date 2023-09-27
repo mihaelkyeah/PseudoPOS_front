@@ -47,10 +47,27 @@
 
     </div>
 
+    <h3 class="text-center">¡Modo de desarrollo!</h3>
+    <div class="row justify-content-center"><button id="button-contact-API" class="btn btn-primary">Contactar API</button></div>
+
     <footer>
         <p class="footer-p pt-3">Copyright © 2023 All Rights and Lefts Reserved</p>
         <p class="footer-p pb-3"><small>Icons obtained from icons8</small></p>
     </footer>
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+        document.querySelector('#button-contact-API').addEventListener('click', () => {
+            fetch("http://127.0.0.1:8000/", {
+                "method": "GET",
+                "Access-Control-Allow-Origin" : "*",
+                "mode": "no-cors"
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data.success);
+                console.log(data.message);
+            });
+        });
+    </script>
 </body>
 </html>
