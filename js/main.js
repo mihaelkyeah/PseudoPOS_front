@@ -2,25 +2,26 @@
 
 // ========== THEME SUPPORT!!! ==========
 // Set default theme or keep chosen theme if storage item is set
+{
+    function setTheme(theme) {
+        document.getElementById('site-theme')
+            .setAttribute('href', `css/themes/${theme}`);
 
-function setTheme(theme) {
-    document.getElementById('site-theme')
-        .setAttribute('href', `css/themes/${theme}`);
+        localStorage.setItem("websiteTheme", theme);
+    }
 
-    localStorage.setItem("websiteTheme", theme);
+    // Add event listener to theme picker to change themes on the fly
+    const themePicker = document.getElementById('theme-select');
+
+    themePicker.addEventListener('change', event => {
+        setTheme(event.target.value)
+    });
+
+    // Set theme depending on if the storage item "websiteTheme" is set
+    const theme = localStorage.getItem("websiteTheme") || 'default.css';
+    themePicker.value = theme;
+    setTheme(theme);
 }
-
-// Add event listener to theme picker to change themes on the fly
-const themePicker = document.getElementById('theme-select');
-
-themePicker.addEventListener('change', event => {
-    setTheme(event.target.value)
-});
-
-// Set theme depending on if the storage item "websiteTheme" is set
-const theme = localStorage.getItem("websiteTheme") || 'default.css';
-themePicker.value = theme;
-setTheme(theme);
 
 // ========== NAV ==========
 
