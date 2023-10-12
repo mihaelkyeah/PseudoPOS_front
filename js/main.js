@@ -3,27 +3,24 @@
 // ========== THEME SUPPORT!!! ==========
 // Set default theme or keep chosen theme if storage item is set
 
-try
-{
-    function setTheme(theme) {
-        document.getElementById('site-theme')
-            .setAttribute('href', `css/themes/${theme}`);
+function setTheme(theme) {
+    document.getElementById('site-theme')
+        .setAttribute('href', `css/themes/${theme}`);
 
-        localStorage.setItem("websiteTheme", theme);
-    }
+    localStorage.setItem("websiteTheme", theme);
+}
 
-    // Add event listener to theme picker to change themes on the fly
-    const themePicker = document.getElementById('theme-select');
+// Add event listener to theme picker to change themes on the fly
+const themePicker = document.getElementById('theme-select');
 
-    themePicker.addEventListener('change', event => {
-        setTheme(event.target.value)
-    });
+themePicker.addEventListener('change', event => {
+    setTheme(event.target.value)
+});
 
-    // Set theme depending on if the storage item "websiteTheme" is set
-    const theme = localStorage.getItem("websiteTheme") || 'default.css';
-    themePicker.value = theme;
-    setTheme(theme);
-} catch(e) { console.log(e) }
+// Set theme depending on if the storage item "websiteTheme" is set
+const theme = localStorage.getItem("websiteTheme") || 'default.css';
+themePicker.value = theme;
+setTheme(theme);
 
 // ========== NAV ==========
 
@@ -38,27 +35,21 @@ Array.prototype.forEach.call(navButtons, (navButton) => {
 // ========== MODALS ==========
 
 function showModal(modalName) {
-    try {
-        document.querySelector('.modals').removeAttribute('hidden');
-        document.querySelector('#'+modalName).removeAttribute('hidden');
-    } catch(e) { console.log(e); }
+    document.querySelector('.modals')?.removeAttribute('hidden');
+    document.querySelector('#'+modalName)?.removeAttribute('hidden');
 }
 function dismissModal(modalName) {
-    try {
-        document.querySelector('#'+modalName).setAttribute('hidden', true);
-        document.querySelector('.modals').setAttribute('hidden', true);
-    } catch(e) { console.log(e); }
+    document.querySelector('#'+modalName)?.setAttribute('hidden', true);
+    document.querySelector('.modals')?.setAttribute('hidden', true);
 }
 
 // ========== BUTTONS ==========
 
 function enableButton(button) {
-    try { document.querySelector('#'+button).removeAttribute('disabled')
-    } catch(e) { console.log(e); }
+    document.querySelector('#'+button)?.removeAttribute('disabled')
 }
 function disableButton(button) {
-    try { document.querySelector('#'+button).setAttribute('disabled', true)
-    } catch(e) { console.log(e); }
+    document.querySelector('#'+button)?.setAttribute('disabled', true)
 }
 
 // ========== UTILITIES ==========
