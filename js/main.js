@@ -1,25 +1,28 @@
 'use strict';
 
 // ========== THEME SUPPORT!!! ==========
-// Set default theme or keep chosen theme if cookie is set
+// Set default theme or keep chosen theme if storage item is set
 
 try
 {
+    function setTheme(theme) {
+        document.getElementById('site-theme')
+            .setAttribute('href', `css/themes/${theme}`);
+
+        localStorage.setItem("websiteTheme", theme);
+    }
+
     // Add event listener to theme picker to change themes on the fly
-    let themePicker = document.querySelector('#theme-select');
-    themePicker.addEventListener('change', () => {
-        document.querySelector('#site-theme').setAttribute('href', 'css/themes/'+themePicker.value);
-        localStorage.setItem("websiteTheme", themePicker.value);
+    const themePicker = document.getElementById('theme-select');
+
+    themePicker.addEventListener('change', event => {
+        setTheme(event.target.value)
     });
 
-    // Set theme depending on if the cookie "websiteTheme" is set
-    let theme = localStorage.getItem("websiteTheme");
-    if(theme !== null) {
-        themePicker.value = theme;
-        document.querySelector('#site-theme').setAttribute('href', 'css/themes/'+theme);
-    } else {
-        document.querySelector('#site-theme').setAttribute('href', 'css/themes/default.css');
-    }
+    // Set theme depending on if the storage item "websiteTheme" is set
+    const theme = localStorage.getItem("websiteTheme") || 'default.css';
+    themePicker.value = theme;
+    setTheme(theme);
 } catch(e) { console.log(e) }
 
 // ========== NAV ==========
