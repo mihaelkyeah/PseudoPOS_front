@@ -25,12 +25,12 @@ setTheme(theme);
 // ========== NAV ==========
 
 // Force non-anchors to work like anchors
-let navButtons = document.querySelectorAll('.nav-ul-li');
-Array.prototype.forEach.call(navButtons, (navButton) => {
-    navButton.addEventListener('click', () => {
-        window.location = navButton.getAttribute('href');
+document.querySelectorAll('.nav-ul-li')
+    .forEach(navButton => {
+        navButton.addEventListener('click', () => {
+            window.location = navButton.getAttribute('href');
+        });
     });
-});
 
 // ========== MODALS ==========
 
